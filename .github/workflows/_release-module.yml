@@ -67,10 +67,10 @@ jobs:
       # be spelled out rather than left to the action's default. A module
       # whose flake does not expose `packages.x86_64-windows` fails only
       # that leg; the other three still publish as a partial release.
-      # logos-osm: the osm module vendors a prebuilt x86_64-linux
-      # libosm_ffi.so (osm-module/lib), so only linux-amd64 is published
-      # until per-platform FFI builds exist.
-      variants: "linux-amd64"
+      # logos-osm: the osm module vendors prebuilt libosm_ffi binaries for
+      # x86_64-linux (.so) and aarch64-darwin (.dylib) in osm-module/lib,
+      # so linux-amd64 and darwin-arm64 are published.
+      variants: "linux-amd64,darwin-arm64"
 
       # ─── Runners and Nix cache (set by variables, not edited here) ───
       # Unset, every job runs GitHub-hosted and only reads the Logos cache.

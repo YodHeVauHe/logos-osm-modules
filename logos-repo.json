@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "name": "logos-osm-modules",
   "displayName": "Logos OSM Modules",
-  "description": "Modules for the OpenStreetMap distribution on Logos (LP-0018): the osm registry SDK module and the osm-app Basecamp app.",
+  "description": "Modules for the OpenStreetMap distribution on Logos (LP-0018): the osm registry SDK module, the osm-app Basecamp app, and the osm_consumer_example / osm-consumer-app embedding examples.",
   "homepage": "https://github.com/YodHeVauHe/logos-osm",
   "indexUrl": "https://github.com/YodHeVauHe/logos-osm-modules/releases/download/index/index.json",
   "trustedSigners": []
