@@ -37,15 +37,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          # Every `path = submodules/<repo>` entry in .gitmodules.
-          paths="$(git config --file .gitmodules --get-regexp 'submodule\..*\.path$' 2>/dev/null \
-                   | awk '{print $2}' | sort -u || true)"
-          if [ -z "${paths}" ]; then
-            echo 'matrix={"module_path":[]}' >> "$GITHUB_OUTPUT"
-            echo 'count=0' >> "$GITHUB_OUTPUT"
-            echo "No submodules declared in .gitmodules — nothing to release."
-            exit 0
-          fi
+          # logos-osm is a multi-module repo: one submodule
+          # (submodules/logos-osm) holds two modules, each in its own
+          # directory with metadata.json + flake.nix. List the module
+          # directories here instead of the submodule paths.
+          paths="submodules/logos-osm/osm-module submodules/logos-osm/osm-app"
           matrix="$(printf '%s\n' ${paths} | jq -R . | jq -cs '{module_path: .}')"
           count="$(printf '%s\n' ${paths} | wc -l | tr -d ' ')"
           echo "matrix=${matrix}" >> "$GITHUB_OUTPUT"

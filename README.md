@@ -1,3 +1,27 @@
+# logos-osm-modules
+
+Logos module catalog for [logos-osm](https://github.com/YodHeVauHe/logos-osm)
+(LP-0018), created from the `logos-modules-release-base` template and
+released with `logos-modules-release-action`.
+
+| Module | Type | Source |
+|---|---|---|
+| `osm` | core (OSM registry SDK) | `submodules/logos-osm/osm-module` |
+| `osm-app` | ui_qml (Basecamp distribution app) | `submodules/logos-osm/osm-app` |
+
+Catalog URL for the package-manager UI / `lgpd`:
+
+```
+https://raw.githubusercontent.com/YodHeVauHe/logos-osm-modules/main/logos-repo.json
+```
+
+Only `linux-amd64` is published for now: the `osm` module vendors a
+prebuilt x86_64-linux `libosm_ffi.so`.
+
+The template's README follows.
+
+---
+
 # logos-modules-release-base
 
 A **fork-me** starting point for running your own Logos module catalog.

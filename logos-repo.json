@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "name": "CHANGE-ME-modules",
-  "displayName": "CHANGE ME — My Logos Modules",
-  "description": "A short human description of this module catalog.",
-  "homepage": "https://example.com/modules",
-  "indexUrl": "https://github.com/CHANGE-ME-OWNER/CHANGE-ME-REPO/releases/download/index/index.json",
+  "name": "logos-osm-modules",
+  "displayName": "Logos OSM Modules",
+  "description": "Modules for the OpenStreetMap distribution on Logos (LP-0018): the osm registry SDK module and the osm-app Basecamp app.",
+  "homepage": "https://github.com/YodHeVauHe/logos-osm",
+  "indexUrl": "https://github.com/YodHeVauHe/logos-osm-modules/releases/download/index/index.json",
   "trustedSigners": []
 }
